@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+        
+def test(request):    
+    return HttpResponse('<h1>This is about me!.</h1>')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test/', test),
 ]
