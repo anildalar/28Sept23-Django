@@ -21,7 +21,11 @@ from django.http import HttpResponse
 def test(request):    
     return HttpResponse('<h1>This is about me!.</h1>')
 
+def hello(request):    
+    return HttpResponse('<h1>Hurrey! First CI/CD Pipeline build successfull</h1>')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', test),
+    path('hello/', hello),
 ]
